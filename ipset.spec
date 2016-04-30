@@ -4,7 +4,7 @@
 #
 Name     : ipset
 Version  : 6.24
-Release  : 4
+Release  : 5
 URL      : http://ipset.netfilter.org/ipset-6.24.tar.bz2
 Source0  : http://ipset.netfilter.org/ipset-6.24.tar.bz2
 Summary  : Userspace library for the ipset extensions and the kernel interface
