@@ -4,13 +4,15 @@
 #
 Name     : ipset
 Version  : 6.24
-Release  : 5
+Release  : 6
 URL      : http://ipset.netfilter.org/ipset-6.24.tar.bz2
 Source0  : http://ipset.netfilter.org/ipset-6.24.tar.bz2
+Source1  : ipset.service
 Summary  : Userspace library for the ipset extensions and the kernel interface
 Group    : Development/Tools
 License  : GPL-2.0 LGPL-2.1
 Requires: ipset-bin
+Requires: ipset-config
 Requires: ipset-lib
 Requires: ipset-doc
 BuildRequires : grep
@@ -24,9 +26,18 @@ instructions too.
 %package bin
 Summary: bin components for the ipset package.
 Group: Binaries
+Requires: ipset-config
 
 %description bin
 bin components for the ipset package.
+
+
+%package config
+Summary: config components for the ipset package.
+Group: Default
+
+%description config
+config components for the ipset package.
 
 
 %package dev
@@ -34,6 +45,7 @@ Summary: dev components for the ipset package.
 Group: Development
 Requires: ipset-lib
 Requires: ipset-bin
+Provides: ipset-devel
 
 %description dev
 dev components for the ipset package.
@@ -50,6 +62,7 @@ doc components for the ipset package.
 %package lib
 Summary: lib components for the ipset package.
 Group: Libraries
+Requires: ipset-config
 
 %description lib
 lib components for the ipset package.
@@ -59,18 +72,23 @@ lib components for the ipset package.
 %setup -q -n ipset-6.24
 
 %build
+export LANG=C
+export SOURCE_DATE_EPOCH=1484203269
 %configure --disable-static --with-kmod=no
 make V=1  %{?_smp_mflags}
 
 %check
+export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=intel.com,localhost
+export no_proxy=localhost
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
 rm -rf %{buildroot}
 %make_install
+mkdir -p %{buildroot}/usr/lib/systemd/system
+install -m 0644 %{SOURCE1} %{buildroot}/usr/lib/systemd/system/ipset.service
 
 %files
 %defattr(-,root,root,-)
@@ -78,6 +96,10 @@ rm -rf %{buildroot}
 %files bin
 %defattr(-,root,root,-)
 /usr/bin/ipset
+
+%files config
+%defattr(-,root,root,-)
+/usr/lib/systemd/system/ipset.service
 
 %files dev
 %defattr(-,root,root,-)
@@ -98,8 +120,8 @@ rm -rf %{buildroot}
 /usr/include/libipset/types.h
 /usr/include/libipset/ui.h
 /usr/include/libipset/utils.h
-/usr/lib64/*.so
-/usr/lib64/pkgconfig/*.pc
+/usr/lib64/libipset.so
+/usr/lib64/pkgconfig/libipset.pc
 
 %files doc
 %defattr(-,root,root,-)
@@ -107,4 +129,5 @@ rm -rf %{buildroot}
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/*.so.*
+/usr/lib64/libipset.so.3
+/usr/lib64/libipset.so.3.6.0
