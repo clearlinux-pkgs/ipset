@@ -4,7 +4,7 @@
 #
 Name     : ipset
 Version  : 6.24
-Release  : 6
+Release  : 7
 URL      : http://ipset.netfilter.org/ipset-6.24.tar.bz2
 Source0  : http://ipset.netfilter.org/ipset-6.24.tar.bz2
 Source1  : ipset.service
