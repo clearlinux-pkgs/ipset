@@ -6,6 +6,7 @@ libipset.so.3:LIBIPSET_4.1
 libipset.so.3:LIBIPSET_4.2
 libipset.so.3:LIBIPSET_4.3
 libipset.so.3:LIBIPSET_4.4
+libipset.so.3:LIBIPSET_4.5
 libipset.so.3:icmp_to_name
 libipset.so.3:icmpv6_to_name
 libipset.so.3:id_to_icmp
@@ -119,6 +120,7 @@ libipset.so.3:ipset_strlcpy
 libipset.so.3:ipset_type_add
 libipset.so.3:ipset_type_check
 libipset.so.3:ipset_type_get
+libipset.so.3:ipset_type_higher_rev
 libipset.so.3:ipset_typename_resolve
 libipset.so.3:ipset_types
 libipset.so.3:name_to_icmp
