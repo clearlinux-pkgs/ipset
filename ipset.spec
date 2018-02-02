@@ -4,7 +4,7 @@
 #
 Name     : ipset
 Version  : 6.35
-Release  : 14
+Release  : 15
 URL      : http://ipset.netfilter.org/ipset-6.35.tar.bz2
 Source0  : http://ipset.netfilter.org/ipset-6.35.tar.bz2
 Source1  : ipset.service
