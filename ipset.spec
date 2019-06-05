@@ -4,7 +4,7 @@
 #
 Name     : ipset
 Version  : 7.1
-Release  : 21
+Release  : 22
 URL      : http://ipset.netfilter.org/ipset-7.1.tar.bz2
 Source0  : http://ipset.netfilter.org/ipset-7.1.tar.bz2
 Source1  : ipset.service
