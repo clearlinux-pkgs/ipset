@@ -1,1 +1,1 @@
---with-kmod=no
+--with-kmod=no --enable-bashcompl
