@@ -4,7 +4,7 @@
 #
 Name     : ipset
 Version  : 7.3
-Release  : 24
+Release  : 25
 URL      : http://ipset.netfilter.org/ipset-7.3.tar.bz2
 Source0  : http://ipset.netfilter.org/ipset-7.3.tar.bz2
 Source1  : ipset.service
