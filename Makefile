@@ -1,5 +1,5 @@
 PKG_NAME := ipset
-URL = http://ipset.netfilter.org/ipset-7.7.tar.bz2
+URL = https://www.netfilter.org/pub/ipset/ipset-7.9.tar.bz2
 ARCHIVES = 
 
 include ../common/Makefile.common
