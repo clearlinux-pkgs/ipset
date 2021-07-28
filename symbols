@@ -4,6 +4,7 @@ libipset.so.13:LIBIPSET_3.0
 libipset.so.13:LIBIPSET_4.0
 libipset.so.13:LIBIPSET_4.1
 libipset.so.13:LIBIPSET_4.10
+libipset.so.13:LIBIPSET_4.11
 libipset.so.13:LIBIPSET_4.2
 libipset.so.13:LIBIPSET_4.3
 libipset.so.13:LIBIPSET_4.4
@@ -151,6 +152,7 @@ libipset.so.13:ipset_type_get
 libipset.so.13:ipset_type_higher_rev
 libipset.so.13:ipset_typename_resolve
 libipset.so.13:ipset_types
+libipset.so.13:ipset_xlate_argv
 libipset.so.13:list_sort
 libipset.so.13:name_to_icmp
 libipset.so.13:name_to_icmpv6
