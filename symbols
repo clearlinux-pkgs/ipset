@@ -5,6 +5,7 @@ libipset.so.13:LIBIPSET_4.0
 libipset.so.13:LIBIPSET_4.1
 libipset.so.13:LIBIPSET_4.10
 libipset.so.13:LIBIPSET_4.11
+libipset.so.13:LIBIPSET_4.12
 libipset.so.13:LIBIPSET_4.2
 libipset.so.13:LIBIPSET_4.3
 libipset.so.13:LIBIPSET_4.4
@@ -61,6 +62,7 @@ libipset.so.13:ipset_match_typename
 libipset.so.13:ipset_parse_after
 libipset.so.13:ipset_parse_argv
 libipset.so.13:ipset_parse_before
+libipset.so.13:ipset_parse_bitmask
 libipset.so.13:ipset_parse_comment
 libipset.so.13:ipset_parse_elem
 libipset.so.13:ipset_parse_ether
