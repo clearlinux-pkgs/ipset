@@ -1,5 +1,10 @@
 Configure miss: _ prefix in compiled symbols
+Configure miss: _ prefix in compiled symbols
+Configure miss: dld.h
 Configure miss: dld.h
 Configure miss: dld_link in -ldld
+Configure miss: dld_link in -ldld
 Configure miss: mach-o/dyld.h
+Configure miss: mach-o/dyld.h
+Configure miss: sys/dl.h
 Configure miss: sys/dl.h
