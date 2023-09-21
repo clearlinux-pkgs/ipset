@@ -4,10 +4,10 @@
 # Using build pattern: configure
 #
 Name     : ipset
-Version  : 7.18
-Release  : 36
-URL      : https://www.netfilter.org/pub/ipset/ipset-7.18.tar.bz2
-Source0  : https://www.netfilter.org/pub/ipset/ipset-7.18.tar.bz2
+Version  : 7.19
+Release  : 37
+URL      : https://www.netfilter.org/pub/ipset/ipset-7.19.tar.bz2
+Source0  : https://www.netfilter.org/pub/ipset/ipset-7.19.tar.bz2
 Source1  : ipset.service
 Summary  : Userspace library for the ipset extensions and the kernel interface
 Group    : Development/Tools
@@ -86,10 +86,10 @@ services components for the ipset package.
 
 
 %prep
-%setup -q -n ipset-7.18
-cd %{_builddir}/ipset-7.18
+%setup -q -n ipset-7.19
+cd %{_builddir}/ipset-7.19
 pushd ..
-cp -a ipset-7.18 buildavx2
+cp -a ipset-7.19 buildavx2
 popd
 
 %build
@@ -97,7 +97,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1695168106
+export SOURCE_DATE_EPOCH=1695307064
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -131,7 +131,7 @@ cd ../buildavx2;
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1695168106
+export SOURCE_DATE_EPOCH=1695307064
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ipset
 cp %{_builddir}/ipset-%{version}/COPYING %{buildroot}/usr/share/package-licenses/ipset/68c94ffc34f8ad2d7bfae3f5a6b996409211c1b1 || :
@@ -146,7 +146,6 @@ install -m 0644 %{SOURCE1} %{buildroot}/usr/lib/systemd/system/ipset.service
 
 %files
 %defattr(-,root,root,-)
-/usr/usr/lib64/pkgconfig/libipset.pc
 
 %files bin
 %defattr(-,root,root,-)
@@ -176,6 +175,7 @@ install -m 0644 %{SOURCE1} %{buildroot}/usr/lib/systemd/system/ipset.service
 /usr/include/libipset/utils.h
 /usr/include/libipset/xlate.h
 /usr/lib64/libipset.so
+/usr/lib64/pkgconfig/libipset.pc
 /usr/share/man/man3/libipset.3
 
 %files lib
